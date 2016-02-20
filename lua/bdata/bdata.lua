@@ -25,7 +25,7 @@ end
 
 function ply:RemoveBData( key )
 	key = string.format( "%s[%s]", self:SteamID64(), key )
-	sql.Query( "DELETE FROM playerbdata WHERE infoid = " .. SQLStr( key ) )
+	sql.Query( "DELETE FROM playerbdata WHERE id = " .. SQLStr( key ) )
 end
 
 -- Grabbing data from the database without the player extension.
@@ -47,5 +47,5 @@ end
 
 function util.RemoveBData( sid, key )
 	key = string.format( "%s[%s]", util.SteamIDTo64( sid ), key )
-	sql.Query( "DELETE FROM playerbdata WHERE infoid = " .. SQLStr( key ) )
+	sql.Query( "DELETE FROM playerbdata WHERE id = " .. SQLStr( key ) )
 end
