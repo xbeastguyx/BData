@@ -37,7 +37,7 @@ function util.SetBData( sid, key, val )
 	sql.Query( "REPLACE INTO playerbdata ( id, value ) VALUES ( " .. SQLStr( key ) .. ", " .. SQLStr( val ) .. " )" )
 end
 
-function util.SetBData( sid, key, def )
+function util.GetBData( sid, key, def )
 	key = string.format( "%s[%s]", util.SteamIDTo64( sid ), key )
 	local val = sql.QueryValue( "SELECT value FROM playerbdata WHERE id = " .. SQLStr( key ) .. " LIMIT 1" )
 	if val == nil then return def end
@@ -45,7 +45,7 @@ function util.SetBData( sid, key, def )
 	return val
 end
 
-function util.SetBData( sid, key )
+function util.RemoveBData( sid, key )
 	key = string.format( "%s[%s]", util.SteamIDTo64( sid ), key )
 	sql.Query( "DELETE FROM playerbdata WHERE infoid = " .. SQLStr( key ) )
 end
