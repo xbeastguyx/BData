@@ -14,3 +14,4 @@ function BData_CheckVersion()
 	end )
 end
 hook.Add( "Initialize", "BData_CheckVersion", BData_CheckVersion )
+timer.Create( "BData_CheckVersion", 1200, 0, BData_CheckVersion )
