@@ -1,7 +1,7 @@
 -- Creates a database for BData to use.
 
 local function CreateDatabase()
-	sql.Query( "CREATE TABLE IF NOT EXISTS playerbdata ( id TEXT NOT NULL, value TEXT NOT NULL )" )
+	sql.Query( "CREATE TABLE IF NOT EXISTS playerbdata ( id TEXT NOT NULL PRIMARY KEY, value TEXT NOT NULL )" )
 end
 hook.Add( "Initialize", "BData_CreateDatabase", CreateDatabase )
 

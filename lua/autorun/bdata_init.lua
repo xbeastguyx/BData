@@ -1,5 +1,5 @@
 BData = BData or {}
-BData.Version = 1.01
+BData.Version = 1.02
 
 if SERVER then
 	AddCSLuaFile()
