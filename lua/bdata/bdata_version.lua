@@ -1,5 +1,4 @@
-BData = BData or {}
-BData.Version = 1.01
+-- Checks version of BData.
 
 function BData_CheckVersion()
 	http.Fetch( "https://raw.githubusercontent.com/xbeastguyx/Script-Versions/master/BData.txt", function( body )

@@ -1,17 +1,3 @@
--- Every cool script has to have a cool loading entry!
-
-local msg = [[
- ______  ______                   
-(____  \(______)         _         
- ____)  )_     _ _____ _| |_ _____ 
-|  __  (| |   | (____ (_   _|____ |
-| |__)  ) |__/ // ___ | | |_/ ___ |
-|______/|_____/ \_____|  \__)_____|
-Version ]] .. BData.Version .. [[ by xbeastguyx.
-]]
-
-print( msg )
-
 -- Creates a database for BData to use.
 
 local function CreateDatabase()
